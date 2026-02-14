@@ -64,6 +64,7 @@ Utwórz nowy plik tekstowy z rozszerzeniem .json, np. biologia.json.
 
 Wklej do niego pytania zachowując poniższy format:
 
+```json
 [
   {
     "category": "Genetyka",
@@ -83,12 +84,14 @@ Wklej do niego pytania zachowując poniższy format:
     "options": [
       { "text": "Ściana komórkowa", "correct": true },
       { "text": "Chloroplasty", "correct": true },
-      { "text": "Centriole", "correct": false }
+      { "text": "Centriole", "correct": false },
+      { "text": "Biom", "correct": false },
+      { "text": "Dendryt", "correct": false }
     ],
     "explanation": "Komórka roślinna posiada ścianę i chloroplasty, ale zazwyczaj brak jej centrioli (typowych dla zwierząt)."
   }
 ]
-
+```
 
 Zapisz plik. Gotowe! Aplikacja automatycznie wykryje nowy moduł (może być wymagane odświeżenie strony).
 
