@@ -1,0 +1,261 @@
+[
+  {
+    "category": "DOM",
+    "type": "single",
+    "question": "W modelu DOM, obiekt `document` stanowi korzeń drzewa. Jaka jest relacja między elementami HTML a węzłami DOM?",
+    "options": [
+      { "text": "Każdy znacznik HTML jest reprezentowany przez obiekt (węzeł), ale atrybuty i tekst są jedynie właściwościami węzła elementu.", "correct": false },
+      { "text": "Model DOM reprezentuje tylko strukturę znaczników, ignorując białe znaki i komentarze.", "correct": false },
+      { "text": "Każdy element, atrybut oraz fragment tekstu w dokumencie HTML jest reprezentowany jako osobny węzeł w drzewie.", "correct": true },
+      { "text": "DOM jest statyczną reprezentacją utworzoną podczas parsowania i nie może być modyfikowany przez JavaScript.", "correct": false }
+    ],
+    "explanation": "W DOM wszystko jest węzłem (Node): elementy, atrybuty (w starszych specyfikacjach, obecnie częściej jako właściwości), tekst, a nawet komentarze.",
+    "module": "web_basics"
+  },
+  {
+    "category": "CSS",
+    "type": "multi",
+    "question": "Które z poniższych stwierdzeń dotyczących modelu pudełkowego (Box Model) w CSS są prawdziwe? (Wybierz wszystkie)",
+    "options": [
+      { "text": "W standardowym modelu (box-sizing: content-box), właściwość `width` określa szerokość samej zawartości (content), nie wliczając paddingu i obramowania.", "correct": true },
+      { "text": "Marginesy (margin) sąsiadujących w pionie elementów blokowych mogą ulegać zjawisku 'margin collapsing' (zapadania).", "correct": true },
+      { "text": "Padding jest zawsze przezroczysty i nie przyjmuje koloru tła elementu.", "correct": false },
+      { "text": "W modelu `box-sizing: border-box`, padding i border są wliczane w ustaloną szerokość elementu.", "correct": true }
+    ],
+    "explanation": "Zrozumienie `box-sizing` oraz zapadania marginesów jest kluczowe dla poprawnego layoutu. Tło elementu rozciąga się również pod paddingiem.",
+    "module": "web_basics"
+  },
+  {
+    "category": "HTTP",
+    "type": "single",
+    "question": "Protokół HTTP jest bezstanowy. Co to oznacza w praktyce dla inżyniera projektującego aplikację?",
+    "options": [
+      { "text": "Serwer nie może przetwarzać więcej niż jednego zapytania jednocześnie.", "correct": false },
+      { "text": "Każde zapytanie jest traktowane niezależnie; serwer nie pamięta poprzednich interakcji bez dodatkowych mechanizmów (np. cookies/tokenów).", "correct": true },
+      { "text": "Połączenie TCP jest zrywane natychmiast po wysłaniu nagłówków.", "correct": false },
+      { "text": "Nie można przesyłać danych sesyjnych w nagłówkach HTTP.", "correct": false }
+    ],
+    "explanation": "Bezstanowość wymusza na programiście stosowanie mechanizmów takich jak sesje, ciasteczka lub tokeny JWT do identyfikacji użytkownika między zapytaniami.",
+    "module": "protocols"
+  },
+  {
+    "category": "HTTP",
+    "type": "multi",
+    "question": "Które metody HTTP są uznawane za idempotentne? (Wybierz wszystkie)",
+    "options": [
+      { "text": "GET", "correct": true },
+      { "text": "POST", "correct": false },
+      { "text": "PUT", "correct": true },
+      { "text": "DELETE", "correct": true }
+    ],
+    "explanation": "Idempotentność oznacza, że wielokrotne wykonanie tego samego zapytania daje ten sam efekt co jednokrotne. POST tworzy nowe zasoby, więc nie jest idempotentny.",
+    "module": "protocols"
+  },
+  {
+    "category": "Cookies",
+    "type": "single",
+    "question": "Ustawiasz ciasteczko sesyjne z flagą `HttpOnly`. Jaki jest główny cel tego działania?",
+    "options": [
+      { "text": "Ciasteczko będzie przesyłane tylko przez protokół HTTPS (szyfrowane).", "correct": false },
+      { "text": "Ciasteczko nie będzie dostępne dla skryptów JavaScript (document.cookie), co chroni przed atakami XSS.", "correct": true },
+      { "text": "Ciasteczko wygaśnie natychmiast po zamknięciu karty przeglądarki.", "correct": false },
+      { "text": "Ciasteczko będzie dostępne tylko dla domeny, która je utworzyła, ignorując subdomeny.", "correct": false }
+    ],
+    "explanation": "`HttpOnly` to kluczowa ochrona przed kradzieżą sesji w przypadku wystąpienia luki Cross-Site Scripting (XSS). Za wymuszenie HTTPS odpowiada flaga `Secure`.",
+    "module": "security"
+  },
+  {
+    "category": "Security",
+    "type": "single",
+    "question": "Na czym polega atak SQL Injection?",
+    "options": [
+      { "text": "Na wstrzyknięciu złośliwego kodu JavaScript do przeglądarki ofiary.", "correct": false },
+      { "text": "Na modyfikacji parametrów wejściowych aplikacji w taki sposób, aby zmienić strukturę zapytania do bazy danych.", "correct": true },
+      { "text": "Na przechwyceniu transmisji danych między serwerem a bazą danych (Man-in-the-Middle).", "correct": false },
+      { "text": "Na przeciążeniu serwera bazy danych dużą liczbą zapytań.", "correct": false }
+    ],
+    "explanation": "SQL Injection występuje, gdy dane od użytkownika są sklejane z zapytaniem SQL bez odpowiedniej sanityzacji lub użycia Prepared Statements.",
+    "module": "security"
+  },
+  {
+    "category": "JavaScript",
+    "type": "multi",
+    "question": "Mechanizm Event Loop w JavaScript odpowiada za asynchroniczność. Jakie elementy biorą w nim udział? (Wybierz wszystkie)",
+    "options": [
+      { "text": "Stos wywołań (Call Stack)", "correct": true },
+      { "text": "Kolejka zadań (Task Queue / Callback Queue)", "correct": true },
+      { "text": "Wielowątkowy procesor (Multi-threading Core)", "correct": false },
+      { "text": "Web APIs (dostarczane przez przeglądarkę, np. setTimeout, fetch)", "correct": true }
+    ],
+    "explanation": "JS jest jednowątkowy. Asynchroniczność jest możliwa dzięki oddelegowaniu zadań do Web APIs, które po zakończeniu wrzucają callbacki do kolejki, skąd Event Loop przenosi je na stos.",
+    "module": "javascript"
+  },
+  {
+    "category": "JavaScript",
+    "type": "single",
+    "question": "Co wypisze w konsoli poniższy kod: `console.log(typeof null)`?",
+    "options": [
+      { "text": "\"null\"", "correct": false },
+      { "text": "\"undefined\"", "correct": false },
+      { "text": "\"object\"", "correct": true },
+      { "text": "\"number\"", "correct": false }
+    ],
+    "explanation": "Jest to znany błąd historyczny w języku JavaScript, który ze względu na kompatybilność wsteczną nie został naprawiony. Null jest prymitywem, ale `typeof` zwraca 'object'.",
+    "module": "javascript"
+  },
+  {
+    "category": "Architektura",
+    "type": "single",
+    "question": "W architekturze MVC (Model-View-Controller), za co odpowiedzialny jest Kontroler?",
+    "options": [
+      { "text": "Za przechowywanie danych i logikę biznesową dostępu do bazy.", "correct": false },
+      { "text": "Za prezentację danych użytkownikowi (HTML/CSS).", "correct": false },
+      { "text": "Za odbieranie danych wejściowych od użytkownika, aktualizację modelu i wybór widoku.", "correct": true },
+      { "text": "Za walidację formularzy po stronie klienta.", "correct": false }
+    ],
+    "explanation": "Kontroler steruje przepływem aplikacji: odbiera żądanie, manipuluje Modelem i decyduje, który Widok pokazać.",
+    "module": "architecture"
+  },
+  {
+    "category": "Security",
+    "type": "multi",
+    "question": "Jakie są skuteczne metody ochrony przed atakami XSS (Cross-Site Scripting)? (Wybierz wszystkie)",
+    "options": [
+      { "text": "Używanie Content Security Policy (CSP).", "correct": true },
+      { "text": "Escaping (ucieczka) danych wyświetlanych w kontekście HTML/JS.", "correct": true },
+      { "text": "Stosowanie szyfrowania SSL/TLS.", "correct": false },
+      { "text": "Walidacja i sanityzacja danych wejściowych.", "correct": true }
+    ],
+    "explanation": "SSL chroni transmisję, ale nie chroni przed wstrzyknięciem kodu. Kluczowe jest traktowanie danych od użytkownika jako niezaufanych (escaping) oraz polityki CSP.",
+    "module": "security"
+  },
+  {
+    "category": "HTTP",
+    "type": "single",
+    "question": "Co oznacza kod odpowiedzi HTTP z grupy 4xx (np. 401, 403, 404)?",
+    "options": [
+      { "text": "Błąd po stronie serwera (np. wyjątek w kodzie).", "correct": false },
+      { "text": "Sukces operacji.", "correct": false },
+      { "text": "Przekierowanie do innego zasobu.", "correct": false },
+      { "text": "Błąd po stronie klienta (np. błędne zapytanie, brak uprawnień, brak zasobu).", "correct": true }
+    ],
+    "explanation": "Kody 4xx sygnalizują, że klient wysłał coś, czego serwer nie może przetworzyć. Kody 5xx to błędy serwera.",
+    "module": "protocols"
+  },
+  {
+    "category": "CSS",
+    "type": "single",
+    "question": "Co oznacza 'specyficzność' (specificity) w CSS?",
+    "options": [
+      { "text": "Ilość użytych właściwości w jednej regule.", "correct": false },
+      { "text": "Algorytm decydujący, który styl zostanie zaaplikowany, gdy do elementu pasuje wiele reguł.", "correct": true },
+      { "text": "Zdolność przeglądarki do renderowania nowych funkcji CSS3.", "correct": false },
+      { "text": "Hierarchia dziedziczenia stylów od rodzica.", "correct": false }
+    ],
+    "explanation": "Specyficzność to waga selektora. Np. ID ma wyższą wagę niż klasa, a styl in-line ma wyższą wagę niż ID.",
+    "module": "web_basics"
+  },
+  {
+    "category": "JavaScript",
+    "type": "multi",
+    "question": "Jakie są różnice między `var`, `let` i `const`? (Wybierz wszystkie)",
+    "options": [
+      { "text": "`var` posiada zakres funkcyjny, natomiast `let` i `const` zakres blokowy.", "correct": true },
+      { "text": "Zmienne zadeklarowane przez `const` są niezmienne (immutable) - nie można zmienić właściwości obiektu przypisanego do `const`.", "correct": false },
+      { "text": "`var` podlega mechanizmowi hoistingu (wynoszenia) i jest inicjalizowany jako `undefined`, `let` wpada w Temporal Dead Zone.", "correct": true },
+      { "text": "`const` wymaga zainicjalizowania wartością w momencie deklaracji.", "correct": true }
+    ],
+    "explanation": "Obiekt przypisany do `const` nie może być nadpisany inną referencją, ale jego wnętrze (właściwości) MOŻNA modyfikować. To częsta pomyłka.",
+    "module": "javascript"
+  },
+  {
+    "category": "Security",
+    "type": "single",
+    "question": "Czym jest atak CSRF (Cross-Site Request Forgery)?",
+    "options": [
+      { "text": "Przechwyceniem hasła użytkownika podczas logowania.", "correct": false },
+      { "text": "Zmuszeniem zalogowanego użytkownika do wykonania niechcianej akcji na zaufanej witrynie bez jego wiedzy.", "correct": true },
+      { "text": "Wstrzyknięciem skryptu kopiącego kryptowaluty.", "correct": false },
+      { "text": "Podszywaniem się pod serwer DNS.", "correct": false }
+    ],
+    "explanation": "CSRF wykorzystuje fakt, że przeglądarka automatycznie dołącza ciasteczka sesyjne do zapytań do danej domeny, nawet jeśli zapytanie pochodzi z innej strony (np. złośliwego linku w mailu).",
+    "module": "security"
+  },
+  {
+    "category": "HTTP",
+    "type": "single",
+    "question": "W nagłówku HTTP `Content-Type: application/json` informujemy serwer lub klienta o:",
+    "options": [
+      { "text": "Kodowaniu znaków (np. UTF-8).", "correct": false },
+      { "text": "Typie MIME przesyłanych danych w ciele komunikatu.", "correct": true },
+      { "text": "Długości przesyłanego pliku.", "correct": false },
+      { "text": "Wersji protokołu HTTP.", "correct": false }
+    ],
+    "explanation": "Nagłówek ten jest kluczowy w API REST, aby odbiorca wiedział, jak sparsować otrzymane bajty (jako JSON, XML, HTML itp.).",
+    "module": "protocols"
+  },
+  {
+    "category": "DOM",
+    "type": "multi",
+    "question": "Jakie metody pozwalają na pobranie elementu z drzewa DOM? (Wybierz wszystkie)",
+    "options": [
+      { "text": "document.getElementById('id')", "correct": true },
+      { "text": "document.querySelector('.klasa')", "correct": true },
+      { "text": "document.findNode('id')", "correct": false },
+      { "text": "document.getElementsByTagName('div')", "correct": true }
+    ],
+    "explanation": "`findNode` nie jest standardową metodą interfejsu Document w DOM.",
+    "module": "web_basics"
+  },
+  {
+    "category": "Architektura",
+    "type": "single",
+    "question": "Co to jest REST (Representational State Transfer)?",
+    "options": [
+      { "text": "Konkretny protokół sieciowy alternatywny dla HTTP.", "correct": false },
+      { "text": "Styl architektoniczny oprogramowania opierający się na zasobach i bezstanowej komunikacji.", "correct": true },
+      { "text": "Biblioteka JavaScript do obsługi zapytań sieciowych.", "correct": false },
+      { "text": "Metoda szyfrowania danych w chmurze.", "correct": false }
+    ],
+    "explanation": "REST to zbiór zasad architektury (constraints), takich jak Client-Server, Stateless, Cacheable, Uniform Interface, a nie konkretna technologia.",
+    "module": "architecture"
+  },
+  {
+    "category": "JavaScript",
+    "type": "single",
+    "question": "Czym jest `Promise` (Obietnica) w JavaScript?",
+    "options": [
+      { "text": "Funkcją, która jest wykonywana natychmiastowo.", "correct": false },
+      { "text": "Obiektem reprezentującym ewentualne zakończenie (sukces lub porażkę) operacji asynchronicznej.", "correct": true },
+      { "text": "Alternatywą dla pętli `for`.", "correct": false },
+      { "text": "Metodą łączenia ciągów znaków.", "correct": false }
+    ],
+    "explanation": "Promise pozwala na wygodniejszą obsługę asynchroniczności niż tzw. 'callback hell'. Ma stany: pending, fulfilled, rejected.",
+    "module": "javascript"
+  },
+  {
+    "category": "Cookies",
+    "type": "multi",
+    "question": "Gdzie fizycznie przechowywane są pliki Cookies? (Wybierz wszystkie)",
+    "options": [
+      { "text": "Na serwerze w bazie danych.", "correct": false },
+      { "text": "W przeglądarce użytkownika (po stronie klienta).", "correct": true },
+      { "text": "Są przesyłane w nagłówkach HTTP między klientem a serwerem.", "correct": true }
+    ],
+    "explanation": "Cookies są przechowywane u klienta, ale 'żyją' w komunikacji – są wysyłane z każdym requestem do domeny, która je ustawiła.",
+    "module": "web_basics"
+  },
+  {
+    "category": "Security",
+    "type": "single",
+    "question": "Co to jest 'Path Traversal'?",
+    "options": [
+      { "text": "Metoda optymalizacji ścieżek w routingu aplikacji SPA.", "correct": false },
+      { "text": "Atak polegający na dostępie do plików poza katalogiem głównym serwera WWW (np. ../../etc/passwd).", "correct": true },
+      { "text": "Błąd polegający na zapętleniu przekierowań HTTP.", "correct": false },
+      { "text": "Technika śledzenia ścieżki użytkownika na stronie.", "correct": false }
+    ],
+    "explanation": "Atak ten (zwany też Directory Traversal) wykorzystuje brak walidacji nazw plików, pozwalając atakującemu na wczytanie plików systemowych.",
+    "module": "security"
+  }
+]

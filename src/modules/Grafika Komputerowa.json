@@ -1,0 +1,326 @@
+[
+{
+"category": "Wizualizacja Danych",
+"type": "single",
+"question": "W potoku wizualizacji danych, który etap następuje bezpośrednio po przetworzeniu i filtracji danych?",
+"options": [
+{ "text": "Akwizycja danych (Data Acquisition)", "correct": false },
+{ "text": "Mapowanie wizualne (Visual Mapping)", "correct": true },
+{ "text": "Rasteryzacja i rendering obrazu", "correct": false },
+{ "text": "Analiza percepcji użytkownika", "correct": false }
+],
+"explanation": "Po przygotowaniu 'surowych' danych następuje Mapowanie Wizualne. To tu danym abstrakcyjnym przypisuje się atrybuty graficzne (zmienne wizualne) jak kolor, pozycja czy wielkość."
+},
+{
+"category": "Matematyka Grafiki 3D",
+"type": "single",
+"question": "Jaka jest główna przewaga kwaternionów nad kątami Eulera w animacji?",
+"options": [
+{ "text": "Mniejszy narzut pamięciowy przy obliczeniach", "correct": false },
+{ "text": "Eliminacja blokady przegubu (Gimbal Lock) i gładka interpolacja SLERP", "correct": true },
+{ "text": "Możliwość bezpośredniego zapisu wierzchołków w 4D", "correct": false },
+{ "text": "Łatwiejsza edycja ręczna przez grafików 3D", "correct": false }
+],
+"explanation": "Kąty Eulera cierpią na Gimbal Lock (utratę stopnia swobody). Kwaterniony rozwiązują to matematycznie i pozwalają na idealnie płynne przejścia między orientacjami."
+},
+{
+"category": "Modele Oświetlenia",
+"type": "single",
+"question": "W modelu oświetlenia Phonga, który składnik jest zależny od pozycji obserwatora (kamery)?",
+"options": [
+{ "text": "Ambient (Światło otoczenia)", "correct": false },
+{ "text": "Diffuse (Światło rozproszone)", "correct": false },
+{ "text": "Specular (Światło odbite zwierciadlanie)", "correct": true },
+{ "text": "Emissive (Światło emitowane)", "correct": false }
+],
+"explanation": "Składnik Specular symuluje odblask źródła światła na powierzchni. Jego intensywność zależy od kąta pomiędzy wektorem odbicia a wektorem skierowanym do oka obserwatora."
+},
+{
+"category": "Algorytmy Rastrowe",
+"type": "single",
+"question": "Jaka jest rola Z-Bufora (Depth Buffer) w procesie rasteryzacji?",
+"options": [
+{ "text": "Przechowywanie kanału Alpha dla przezroczystości", "correct": false },
+{ "text": "Testowanie widoczności powierzchni (HSR)", "correct": true },
+{ "text": "Wygładzanie krawędzi (Anti-aliasing)", "correct": false },
+{ "text": "Obliczanie cieni rzucanych przez obiekty", "correct": false }
+],
+"explanation": "Z-Bufor przechowuje odległość każdego piksela od kamery. Pozwala to rozstrzygnąć, który obiekt znajduje się bliżej i powinien zasłonić te położone dalej."
+},
+{
+"category": "Wizualizacja Obiektów 3D",
+"type": "single",
+"question": "Który algorytm zamienia dane voxelowe na siatkę trójkątów?",
+"options": [
+{ "text": "Ray Marching", "correct": false },
+{ "text": "Marching Cubes", "correct": true },
+{ "text": "Delaunay Triangulation", "correct": false },
+{ "text": "Subdivision Surfaces", "correct": false }
+],
+"explanation": "Marching Cubes analizuje wierzchołki voxela i na podstawie ich wartości generuje trójkąty tworzące izopowierzchnię."
+},
+{
+"category": "Programowanie GPU",
+"type": "single",
+"question": "Za co w nowoczesnym potoku graficznym odpowiada Fragment Shader?",
+"options": [
+{ "text": "Za transformację współrzędnych wierzchołków", "correct": false },
+{ "text": "Za teselację siatki geometrycznej", "correct": false },
+{ "text": "Za ustalenie ostatecznego koloru piksela", "correct": true },
+{ "text": "Za składanie prymitywów z wierzchołków", "correct": false }
+],
+"explanation": "Fragment Shader jest wywoływany dla każdego zrasteryzowanego fragmentu i oblicza jego finalny kolor (tekstury, oświetlenie per-pixel)."
+},
+{
+"category": "Teksturowanie",
+"type": "single",
+"question": "Czym jest MIP Mapping?",
+"options": [
+{ "text": "Techniką nakładania tekstur na sferę", "correct": false },
+{ "text": "Przechowywaniem pomniejszonych kopii tekstury dla optymalizacji", "correct": true },
+{ "text": "Metodą generowania map wypukłości", "correct": false },
+{ "text": "Algorytmem kompresji tekstur", "correct": false }
+],
+"explanation": "MIP Mapping zapobiega aliasingowi i zwiększa wydajność, używając mniejszych wersji tekstury, gdy obiekt jest daleko od kamery."
+},
+{
+"category": "Matematyka Grafiki 3D",
+"type": "single",
+"question": "Dlaczego w grafice stosuje się współrzędne jednorodne (czwarta składowa 'w')?",
+"options": [
+{ "text": "Aby reprezentować kolory RGBA", "correct": false },
+{ "text": "Aby umożliwić reprezentację translacji jako mnożenia macierzy", "correct": true },
+{ "text": "Aby zwiększyć precyzję zmiennoprzecinkową", "correct": false },
+{ "text": "Aby zapisać czas animacji w wektorze", "correct": false }
+],
+"explanation": "Współrzędne jednorodne pozwalają zamknąć translację, obrót i skalowanie w jednej macierzy 4x4, co upraszcza obliczenia na GPU."
+},
+{
+"category": "Modele Oświetlenia",
+"type": "single",
+"question": "Co opisuje prawo Lamberta w modelu oświetlenia rozproszonego (Diffuse)?",
+"options": [
+{ "text": "Zależność jasności od cosinusa kąta padania światła", "correct": true },
+{ "text": "Zależność jasności od kwadratu odległości", "correct": false },
+{ "text": "Odbicie światła od gładkich powierzchni lustrzanych", "correct": false },
+{ "text": "Zmianę barwy światła przy przejściu przez ośrodek", "correct": false }
+],
+"explanation": "Jasność powierzchni matowej jest największa, gdy światło pada prostopadle (kąt 0, cosinus 1) i maleje wraz ze zwiększaniem kąta padania."
+},
+{
+"category": "Cieniowanie",
+"type": "single",
+"question": "Jaka jest główna różnica między cieniowaniem Gourauda a cieniowaniem Phonga?",
+"options": [
+{ "text": "Gouraud jest wolniejszy, ale daje lepsze odblaski", "correct": false },
+{ "text": "Gouraud interpoluje kolory, Phong interpoluje wektory normalne", "correct": true },
+{ "text": "Phong nie obsługuje oświetlenia zwierciadlanego", "correct": false },
+{ "text": "Gouraud wymaga użycia Ray Tracingu", "correct": false }
+],
+"explanation": "Gouraud liczy światło tylko w wierzchołkach, co tworzy artefakty przy dużych poligonach. Phong liczy światło dla każdego piksela (per-fragment), dając gładkie odblaski."
+},
+{
+"category": "Animacja",
+"type": "single",
+"question": "Na czym polega zadanie Kinematyki Odwrotnej (IK)?",
+"options": [
+{ "text": "Obliczeniu pozycji dłoni na podstawie kątów w stawach", "correct": false },
+{ "text": "Wyznaczeniu kątów w stawach dla zadanej pozycji końcówki", "correct": true },
+{ "text": "Odtwarzaniu klatek animacji w odwrotnej kolejności", "correct": false },
+{ "text": "Symulacji kolizji między szkieletami", "correct": false }
+],
+"explanation": "IK pozwala animatorowi ustawić dłoń postaci w konkretnym miejscu, a komputer sam oblicza, jak muszą zgiąć się łokieć i ramię."
+},
+{
+"category": "Ray Tracing",
+"type": "single",
+"question": "Jaki jest cel stosowania struktur takich jak BVH w Ray Tracingu?",
+"options": [
+{ "text": "Zwiększenie rozdzielczości obrazu końcowego", "correct": false },
+{ "text": "Zredukowanie liczby testów przecięcia promienia z geometrią", "correct": true },
+{ "text": "Poprawa jakości cieni miękkich", "correct": false },
+{ "text": "Umożliwienie teselacji w czasie rzeczywistym", "correct": false }
+],
+"explanation": "Bez struktur przestrzennych musielibyśmy sprawdzać kolizję każdego promienia z każdym trójkątem (złożoność liniowa). BVH redukuje to do złożoności logarytmicznej."
+},
+{
+"category": "Algorytmy Rastrowe",
+"type": "single",
+"question": "Dlaczego algorytm liniowy Bresenhama jest tak wydajny?",
+"options": [
+{ "text": "Opiera się wyłącznie na operacjach na liczbach całkowitych", "correct": true },
+{ "text": "Wykorzystuje jednostki cieniujące GPU", "correct": false },
+{ "text": "Wykonuje obliczenia w przestrzeni 3D", "correct": false },
+{ "text": "Stosuje zaawansowany antyaliasing krawędzi", "correct": false }
+],
+"explanation": "Bresenham wyeliminował powolne dzielenie i liczby zmiennoprzecinkowe, zastępując je prostym dodawaniem błędu w pętli całkowitoliczbowej."
+},
+{
+"category": "Teksturowanie",
+"type": "single",
+"question": "Czym charakteryzuje się filtrowanie anizotropowe?",
+"options": [
+{ "text": "Usuwaniem szumów z map normalnych", "correct": false },
+{ "text": "Poprawą ostrości tekstur oglądanych pod ostrym kątem", "correct": true },
+{ "text": "Generowaniem tekstur za pomocą fraktali", "correct": false },
+{ "text": "Zmniejszeniem zapotrzebowania na pamięć VRAM", "correct": false }
+],
+"explanation": "Standardowe filtrowanie rozmywa tekstury w oddali (np. drogę przed kamerą). Filtrowanie anizotropowe próbkuje teksturę w sposób wydłużony, zachowując detal."
+},
+{
+"category": "Wizualizacja Danych",
+"type": "single",
+"question": "Do czego służy wykres współrzędnych równoległych (Parallel Coordinates)?",
+"options": [
+{ "text": "Do wizualizacji terenu na mapach topograficznych", "correct": false },
+{ "text": "Do analizy danych wielowymiarowych na płaszczyźnie 2D", "correct": true },
+{ "text": "Do przedstawiania hierarchii plików w systemie", "correct": false },
+{ "text": "Do wyświetlania zmian temperatury w czasie", "correct": false }
+],
+"explanation": "Każdy wymiar to pionowa oś. Dane są liniami łączącymi wartości na osiach, co pozwala wykryć korelacje między wieloma parametrami jednocześnie."
+},
+{
+"category": "Teksturowanie",
+"type": "single",
+"question": "Na czym polega technika Normal Mapping?",
+"options": [
+{ "text": "Na dodaniu nowej geometrii do modelu (tesselacja)", "correct": false },
+{ "text": "Na modyfikacji wektora normalnego w celu symulacji detali", "correct": true },
+{ "text": "Na zmianie koloru w zależności od kąta kamery", "correct": false },
+{ "text": "Na rzutowaniu cieni bezpośrednio na teksturę", "correct": false }
+],
+"explanation": "Używamy tekstury do 'oszukiwania' równania oświetlenia. Geometria pozostaje płaska, ale światło odbija się tak, jakby na powierzchni były rysy i wgłębienia."
+},
+{
+"category": "Programowanie GPU",
+"type": "single",
+"question": "Jaka jest rola Geometry Shadera w potoku OpenGL?",
+"options": [
+{ "text": "Tylko transformacja wierzchołków", "correct": false },
+{ "text": "Generowanie nowej geometrii lub usuwanie prymitywów na GPU", "correct": true },
+{ "text": "Ostateczna rasteryzacja fragmentów", "correct": false },
+{ "text": "Zarządzanie pamięcią tekstur", "correct": false }
+],
+"explanation": "Geometry Shader może przyjąć jeden trójkąt i wypuścić np. 10 nowych, co pozwala na generowanie cząsteczek, trawy czy efektów wybuchu."
+},
+{
+"category": "Modele Oświetlenia (PBR)",
+"type": "single",
+"question": "W modelu Cooka-Torrance'a, co określa efekt Fresnela?",
+"options": [
+{ "text": "Chropowatość powierzchni materiału", "correct": false },
+{ "text": "Wzrost refleksyjności przy patrzeniu pod ostrym kątem", "correct": true },
+{ "text": "Rozkład mikropowierzchni (Microfacets)", "correct": false },
+{ "text": "Pochłanianie światła przez materiały dielektryczne", "correct": false }
+],
+"explanation": "Efekt Fresnela mówi, że większość materiałów staje się 'lustrzana', gdy patrzymy na nie pod kątem bliskim 90 stopni do normalnej."
+},
+{
+"category": "Modelowanie 3D",
+"type": "single",
+"question": "Do czego wykorzystuje się Systemy Cząsteczkowe?",
+"options": [
+{ "text": "Do kompresji modeli szkieletowych", "correct": false },
+{ "text": "Do symulacji zjawisk amorficznych jak ogień, dym czy deszcz", "correct": true },
+{ "text": "Do tworzenia idealnie gładkich krzywych NURBS", "correct": false },
+{ "text": "Do obliczania kolizji między bryłami sztywnymi", "correct": false }
+],
+"explanation": "Systemy te zarządzają ogromną liczbą małych obiektów o krótkim czasie życia, co pozwala symulować zjawiska bez stałej geometrii."
+},
+{
+"category": "Wizualizacja Danych",
+"type": "single",
+"question": "Czym jest Glif (Glyph) w wizualizacji danych?",
+"options": [
+{ "text": "Krojem pisma użytym w legendzie", "correct": false },
+{ "text": "Złożonym symbolem reprezentującym wiele cech danych naraz", "correct": true },
+{ "text": "Najmniejszą jednostką obrazu (pikselem)", "correct": false },
+{ "text": "Błędem powstałym przy mapowaniu kolorów", "correct": false }
+],
+"explanation": "Glif to metafora wizualna (np. strzałka, której kolor to temperatura, a długość to prędkość wiatru)."
+},
+{
+"category": "Ray Tracing",
+"type": "single",
+"question": "Jak sprawdza się obecność cienia w Ray Tracingu?",
+"options": [
+{ "text": "Przez analizę jasności w Z-Buforze", "correct": false },
+{ "text": "Przez wypuszczenie promienia wtórnego w stronę światła", "correct": true },
+{ "text": "Poprzez porównanie koloru z mapą cieni", "correct": false },
+{ "text": "Dzięki interpolacji cieniowania Gourauda", "correct": false }
+],
+"explanation": "Jeśli promień wysłany z punktu w stronę światła napotka przeszkodę, punkt znajduje się w cieniu."
+},
+{
+"category": "Potok Graficzny",
+"type": "single",
+"question": "Na czym polega etap Clippingu (Przycinania)?",
+"options": [
+{ "text": "Na zmniejszaniu rozmiaru tekstur", "correct": false },
+{ "text": "Na usuwaniu części geometrii spoza bryły widzenia", "correct": true },
+{ "text": "Na kompresji gotowej klatki obrazu", "correct": false },
+{ "text": "Na usuwaniu niewidocznych ścian (Back-face culling)", "correct": false }
+],
+"explanation": "Clipping przycina trójkąty do granic okna widzenia, aby GPU nie marnowało mocy na piksele poza ekranem."
+},
+{
+"category": "Algorytmy Rastrowe",
+"type": "single",
+"question": "Czym jest aliasing w grafice komputerowej?",
+"options": [
+{ "text": "Błędem w kodzie programu cieniującego", "correct": false },
+{ "text": "Efektem 'schodkowania' wynikającym z dyskretnej natury pikseli", "correct": true },
+{ "text": "Sposobem na wygładzanie krawędzi obiektów", "correct": false },
+{ "text": "Algorytmem szybkiego teksturowania", "correct": false }
+],
+"explanation": "Aliasing powstaje, gdy próbujemy przedstawić ciągłe kształty na siatce pikseli o ograniczonej rozdzielczości."
+},
+{
+"category": "Wizualizacja Danych",
+"type": "single",
+"question": "Jaki jest cel redukcji wymiarowości (np. PCA) w wizualizacji?",
+"options": [
+{ "text": "Zmniejszenie wagi plików z danymi", "correct": false },
+{ "text": "Rzutowanie danych wielowymiarowych na 2D/3D dla człowieka", "correct": true },
+{ "text": "Usunięcie rekordów o zerowej wartości", "correct": false },
+{ "text": "Zwiększenie liczby parametrów dla lepszej precyzji", "correct": false }
+],
+"explanation": "Pozwala to zobaczyć strukturę i klastry w danych, które oryginalnie mają np. 50 wymiarów."
+},
+{
+"category": "Animacja",
+"type": "single",
+"question": "Na czym polega Skinning (Vertex Weighting)?",
+"options": [
+{ "text": "Na nakładaniu tekstury skóry na postać", "correct": false },
+{ "text": "Na powiązaniu wierzchołków z kośćmi za pomocą wag", "correct": true },
+{ "text": "Na tworzeniu szkieletu postaci od zera", "correct": false },
+{ "text": "Na symulacji fizycznej ubrań postaci", "correct": false }
+],
+"explanation": "Dzięki wagom wierzchołki przy stawach poruszają się płynnie, uśredniając ruch sąsiednich kości (np. zgięcie łokcia)."
+},
+{
+"category": "Algorytmy Rastrowe",
+"type": "single",
+"question": "Metoda Floyda-Steinberga służy do:",
+"options": [
+{ "text": "Rysowania antyaliasingowych okręgów", "correct": false },
+{ "text": "Rozpraszania błędu kwantyzacji w półtonowaniu (dithering)", "correct": true },
+{ "text": "Szybkiego wypełniania obszarów kolorem", "correct": false },
+{ "text": "Sortowania prymitywów w Ray Tracingu", "correct": false }
+],
+"explanation": "Pozwala uzyskać wrażenie wielu odcieni szarości na urządzeniach potrafiących wyświetlić tylko czerń i biel."
+},
+{
+"category": "Matematyka Grafiki 3D",
+"type": "single",
+"question": "Do czego wykorzystuje się iloczyn wektorowy (Cross Product)?",
+"options": [
+{ "text": "Do obliczenia kąta między wektorami", "correct": false },
+{ "text": "Do wyznaczenia wektora normalnego powierzchni trójkąta", "correct": true },
+{ "text": "Do wyznaczenia długości wektora", "correct": false },
+{ "text": "Do rzutowania wektora na oś", "correct": false }
+],
+"explanation": "Iloczyn wektorowy dwóch boków trójkąta daje wektor prostopadły do nich, czyli normalną niezbędną do liczenia oświetlenia."
+}
+]

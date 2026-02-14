@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ustawiamy ciemne tło strony globalnie, żeby pasowało do "Demo" */
+body {
+  background-color: #0f1116; /* Bardzo ciemny granat/czarny */
+  color: #e2e8f0;
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
