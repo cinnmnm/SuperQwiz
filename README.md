@@ -1,68 +1,62 @@
-System Quizów Lokalnych 🎓
+# System Quizów Lokalnych 🎓
 
-Aplikacja typu "Drill & Practice" do nauki przed egzaminami, napisana w React + Vite.
+Aplikacja typu **"Drill & Practice"** do nauki przed egzaminami, napisana w **React + Vite**. Umożliwia łatwe dodawanie własnych pytań poprzez pliki JSON i śledzenie postępów nauki.
 
-Umożliwia łatwe dodawanie własnych pytań poprzez pliki JSON i śledzenie postępów nauki.
+## 🚀 Funkcje
 
-🚀 Funkcje
+* **Dynamiczne moduły:** Wystarczy wrzucić plik `.json` do folderu, a aplikacja sama go wykryje.
+* **Inteligentna powtórka:** System pamięta, na które pytania odpowiedziałeś poprawnie i nie wyświetla ich ponownie w danej sesji (dane zapisywane w `LocalStorage`).
+* **Tryby pytań:** Obsługa pytań jednokrotnego i wielokrotnego wyboru.
+* **Tryb Ciemny:** Nowoczesny interfejs oparty na **Tailwind CSS**.
+---
 
-Dynamiczne moduły: Wystarczy wrzucić plik .json do folderu, a aplikacja sama go wykryje.
-
-Inteligentna powtórka: System pamięta, na które pytania odpowiedziałeś poprawnie i nie wyświetla ich ponownie w danej sesji (dane zapisywane w LocalStorage).
-
-Tryby pytań: Obsługa pytań jednokrotnego i wielokrotnego wyboru.
-
-Tryb Ciemny: Nowoczesny interfejs oparty na Tailwind CSS.
-
-Responsywność: Działa na komputerach i telefonach.
-
-🛠️ Wymagania
+## 🛠️ Wymagania
 
 Aby uruchomić projekt, musisz mieć zainstalowane:
 
-Node.js (wersja 18 lub nowsza) - Pobierz tutaj
+* **Node.js** (wersja 18 lub nowsza) – [Pobierz tutaj](https://nodejs.org/)
+* **Git** (opcjonalnie, do pobrania repozytorium)
 
-Git (opcjonalnie, do pobrania repozytorium)
+---
 
-📥 Instalacja i Uruchomienie
+## 📥 Instalacja i Uruchomienie
 
-Wykonaj te kroki po kolei w terminalu (konsoli):
+Wykonaj poniższe kroki w terminalu:
 
-1. Pobierz projekt
+### 1. Pobierz projekt
 
 Sklonuj repozytorium lub pobierz je jako plik ZIP i rozpakuj.
 
-git clone [https://github.com/TWOJA_NAZWA_UZYTKOWNIKA/NAZWA_PROJEKTU.git](https://github.com/TWOJA_NAZWA_UZYTKOWNIKA/NAZWA_PROJEKTU.git)
-cd NAZWA_PROJEKTU
+### 2. Zainstaluj zależności
 
+Komenda ta pobierze folder `node_modules` na podstawie pliku `package.json`.
 
-2. Zainstaluj zależności
-
-To kluczowy krok. Komenda ta pobierze folder node_modules na podstawie pliku package.json.
-
+```bash
 npm install
 
+```
 
-3. Uruchom aplikację
+### 3. Uruchom aplikację
 
 To polecenie uruchomi lokalny serwer deweloperski.
 
+```bash
 npm run dev
 
+```
 
-Po wpisaniu tej komendy zobaczysz w terminalu link (zazwyczaj http://localhost:5173/). Kliknij go z przytrzymanym klawiszem Ctrl (lub Cmd na Mac), aby otworzyć aplikację w przeglądarce.
+Po wpisaniu tej komendy zobaczysz w terminalu link (zazwyczaj `http://localhost:5173/`). Kliknij go z przytrzymanym klawiszem **Ctrl** (lub **Cmd** na Mac), aby otworzyć aplikację w przeglądarce.
 
-📚 Jak dodać własne pytania?
+---
+
+## 📚 Jak dodać własne pytania?
 
 Nie musisz edytować kodu, aby dodać nowy przedmiot!
 
-Otwórz folder projektu.
-
-Przejdź do ścieżki: src/modules/.
-
-Utwórz nowy plik tekstowy z rozszerzeniem .json, np. biologia.json.
-
-Wklej do niego pytania zachowując poniższy format:
+1. Otwórz folder projektu.
+2. Przejdź do ścieżki: `src/modules/`.
+3. Utwórz nowy plik tekstowy z rozszerzeniem `.json`, np. `biologia.json`.
+4. Wklej do niego pytania, zachowując poniższy format:
 
 ```json
 [
@@ -91,17 +85,18 @@ Wklej do niego pytania zachowując poniższy format:
     "explanation": "Komórka roślinna posiada ścianę i chloroplasty, ale zazwyczaj brak jej centrioli (typowych dla zwierząt)."
   }
 ]
+
 ```
 
-Zapisz plik. Gotowe! Aplikacja automatycznie wykryje nowy moduł (może być wymagane odświeżenie strony).
+5. Zapisz plik. **Gotowe!** Aplikacja automatycznie wykryje nowy moduł (może być wymagane odświeżenie strony).
 
-⚠️ Rozwiązywanie problemów
+---
 
-Błąd: npm nie jest rozpoznawany
+## ⚠️ Rozwiązywanie problemów
+
+* **Błąd: `npm` nie jest rozpoznawany**
 Upewnij się, że zainstalowałeś Node.js i zrestartowałeś komputer/terminal.
-
-Błąd: Aplikacja wygląda brzydko (brak kolorów)
-Upewnij się, że po npm install uruchomiłeś projekt przez npm run dev. Jeśli nadal brak stylów, sprawdź czy pliki tailwind.config.js i postcss.config.js znajdują się w głównym folderze.
-
-Widzę "Tryb Demonstracyjny"
-Oznacza to, że folder src/modules jest pusty lub aplikacja nie została uruchomiona przez Vite (npm run dev).
+* **Błąd: Aplikacja wygląda "brzydko" (brak kolorów)**
+Upewnij się, że po `npm install` uruchomiłeś projekt przez `npm run dev`. Jeśli nadal brak stylów, sprawdź czy pliki `tailwind.config.js` i `postcss.config.js` znajdują się w głównym folderze.
+* **Widzę "Tryb Demonstracyjny"**
+Oznacza to, że folder `src/modules` jest pusty lub aplikacja nie została uruchomiona przez Vite (`npm run dev`).
